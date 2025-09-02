@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtCore import QTimer, Qt, pyqtSignal
 from PyQt5.QtGui import QIcon
-from utils.models import get_time_remaining, set_session_state
+from utils.models import get_time_remaining, set_session_state, is_user_active
 from utils.db import get_connection
 from utils.config_manager import load_config
 import os
@@ -110,6 +110,9 @@ class SessionWindow(QMainWindow):
         self.update_timer_label()
 
     def sync_with_db(self):
+        if not is_user_active(self.user["id"]):
+            self.close_session()
+            return
         db_time = get_time_remaining(self.user["id"])
         if db_time <= 0:
             self.close_session()
@@ -117,7 +120,6 @@ class SessionWindow(QMainWindow):
         if db_time != self.remaining_time:
             self.remaining_time = int(db_time)
             self.update_timer_label()
-
     def close_session(self):
         tiempo_guardado = int(self.remaining_time)
         conn = get_connection()

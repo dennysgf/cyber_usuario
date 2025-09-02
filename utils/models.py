@@ -74,3 +74,17 @@ def set_session_state(user_id: int, active: bool, pc_number: int = None):
     except Exception as e:
         print(f"Error en set_session_state: {e}")
         return False
+
+def is_user_active(user_id):
+    conn = get_connection()
+    if not conn:
+        return False
+    try:
+        cur = conn.cursor()
+        cur.execute("SELECT is_active FROM usuarios WHERE id = %s", (user_id,))
+        result = cur.fetchone()
+        cur.close()
+        conn.close()
+        return result[0] if result else False
+    except Exception:
+        return False

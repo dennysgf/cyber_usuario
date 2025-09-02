@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00f21847-4680-4f90-9f84-7ca7220d30c6" name="Changes" comment="modificaciones a sesiones de maquinas usadas">
-      <change afterPath="$PROJECT_DIR$/dialogs/config_dialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/config_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dialogs/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogs/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/db.py" afterDir="false" />
-    </list>
+    <list default="true" id="00f21847-4680-4f90-9f84-7ca7220d30c6" name="Changes" comment="configuración de pc para rentabiliadd de uso y desuso" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756824526204</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="configuración de pc para rentabiliadd de uso y desuso">
+      <option name="closed" value="true" />
+      <created>1756826039781</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756826039781</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -196,6 +197,7 @@
     <MESSAGE value="ajustes" />
     <MESSAGE value="ajustes para recargas de tiempo al usuario" />
     <MESSAGE value="modificaciones a sesiones de maquinas usadas" />
-    <option name="LAST_COMMIT_MESSAGE" value="modificaciones a sesiones de maquinas usadas" />
+    <MESSAGE value="configuración de pc para rentabiliadd de uso y desuso" />
+    <option name="LAST_COMMIT_MESSAGE" value="configuración de pc para rentabiliadd de uso y desuso" />
   </component>
 </project>
