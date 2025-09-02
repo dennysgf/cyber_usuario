@@ -1,7 +1,8 @@
-from PyQt5.QtWidgets import QDialog, QVBoxLayout, QLabel, QLineEdit, QPushButton
+from PyQt5.QtWidgets import QDialog, QVBoxLayout, QLabel, QLineEdit, QPushButton, QHBoxLayout
 from PyQt5.QtCore import Qt
 from utils.models import validate_user
 from utils.config_manager import load_config
+from dialogs.exit_dialog import ExitDialog
 
 class LoginDialog(QDialog):
     def __init__(self, parent=None):
@@ -10,6 +11,14 @@ class LoginDialog(QDialog):
         self.showFullScreen()
 
         layout = QVBoxLayout()
+
+        top_bar = QHBoxLayout()
+        self.btn_exit = QPushButton("X")
+        self.btn_exit.setFixedSize(40, 40)
+        self.btn_exit.setStyleSheet("background-color: red; color: white; font-weight: bold; font-size: 18px;")
+        self.btn_exit.clicked.connect(self.try_exit)
+        top_bar.addWidget(self.btn_exit)
+        layout.addLayout(top_bar)
 
         config = load_config()
         pc_number = config.get("pc_number") if config else "0"
@@ -54,6 +63,11 @@ class LoginDialog(QDialog):
         self.setStyleSheet("background-color: #121212; color: white; font-family: Consolas;")
         self.setLayout(layout)
         self.user_data = None
+
+    def try_exit(self):
+        dlg = ExitDialog(self)
+        if dlg.exec_() == ExitDialog.Accepted and dlg.accepted:
+            self.reject()
 
     def login(self):
         username = self.username_input.text().strip()

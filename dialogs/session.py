@@ -85,7 +85,8 @@ class SessionWindow(QMainWindow):
 
         config = load_config()
         pc_number = int(config.get("pc_number", 0)) if config else 0
-        set_session_state(self.user["id"], True, pc_number)
+        hostname = config.get("hostname") if config else None
+        set_session_state(self.user["id"], True, pc_number, hostname)
 
     def hide_to_tray(self):
         self.hide()

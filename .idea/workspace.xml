@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00f21847-4680-4f90-9f84-7ca7220d30c6" name="Changes" comment="configuración de pc para rentabiliadd de uso y desuso" />
+    <list default="true" id="00f21847-4680-4f90-9f84-7ca7220d30c6" name="Changes" comment="configuración de sesiones activas e inactivas">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dialogs/exit_dialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dialogs/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogs/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dialogs/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogs/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/config_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/config_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/models.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,18 +53,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.main_user.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_connection.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/Desktop/cyber_control/cyber_usuario/assets&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main_user.executor": "Run",
+    "Python.test_connection.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/usuario/Desktop/cyber_control/cyber_usuario"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\usuario\Desktop\cyber_control\cyber_usuario\assets" />
@@ -175,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756826039781</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="configuración de sesiones activas e inactivas">
+      <option name="closed" value="true" />
+      <created>1756826658917</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756826658917</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -198,6 +216,7 @@
     <MESSAGE value="ajustes para recargas de tiempo al usuario" />
     <MESSAGE value="modificaciones a sesiones de maquinas usadas" />
     <MESSAGE value="configuración de pc para rentabiliadd de uso y desuso" />
-    <option name="LAST_COMMIT_MESSAGE" value="configuración de pc para rentabiliadd de uso y desuso" />
+    <MESSAGE value="configuración de sesiones activas e inactivas" />
+    <option name="LAST_COMMIT_MESSAGE" value="configuración de sesiones activas e inactivas" />
   </component>
 </project>
