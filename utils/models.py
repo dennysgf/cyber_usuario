@@ -39,11 +39,38 @@ def logout_user(user_id):
         return False
     try:
         cur = conn.cursor()
-        cur.execute("UPDATE usuarios SET tiempo_restante = 0 WHERE id = %s", (user_id,))
+        cur.execute(
+            "UPDATE usuarios SET is_active = FALSE, current_pc = NULL WHERE id = %s",
+            (user_id,)
+        )
         conn.commit()
         cur.close()
         conn.close()
         return True
     except Exception as e:
         print(f"Error al cerrar sesión: {e}")
+        return False
+
+def set_session_state(user_id: int, active: bool, pc_number: int = None):
+    conn = get_connection()
+    if not conn:
+        return False
+    try:
+        cur = conn.cursor()
+        if active:
+            cur.execute(
+                "UPDATE usuarios SET is_active = TRUE, current_pc = %s WHERE id = %s",
+                (pc_number, user_id)
+            )
+        else:
+            cur.execute(
+                "UPDATE usuarios SET is_active = FALSE, current_pc = NULL WHERE id = %s",
+                (user_id,)
+            )
+        conn.commit()
+        cur.close()
+        conn.close()
+        return True
+    except Exception as e:
+        print(f"Error en set_session_state: {e}")
         return False
