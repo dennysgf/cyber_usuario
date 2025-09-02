@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import (
     QMainWindow, QWidget, QHBoxLayout, QLabel, QPushButton,
     QApplication, QSystemTrayIcon, QMenu, QAction
 )
-from PyQt5.QtCore import QTimer, Qt, pyqtSignal
+from PyQt5.QtCore import QTimer, Qt, pyqtSignal, QEvent
 from PyQt5.QtGui import QIcon
 from utils.models import get_time_remaining, set_session_state, is_user_active
 from utils.db import get_connection
@@ -60,9 +60,9 @@ class SessionWindow(QMainWindow):
         self.timer.timeout.connect(self.countdown)
         self.timer.start(1000)
 
-        ICON_PATH = os.path.join(os.path.dirname(__file__), "..", "assets", "icons8-controlar-64.png")
-
+        ICON_PATH = os.path.join(os.path.dirname(__file__), "..", "assets", "icons8-controlar-64.ico")
         self.tray_icon = QSystemTrayIcon(QIcon(ICON_PATH), self)
+
         tray_menu = QMenu()
         restore_action = QAction("Restaurar", self)
         restore_action.triggered.connect(self.showNormal)
@@ -90,6 +90,7 @@ class SessionWindow(QMainWindow):
 
     def hide_to_tray(self):
         self.hide()
+        self.tray_icon.show()
         self.tray_icon.showMessage("Cyber Control", "La barra se ocultó en el área de notificación.")
 
     def on_tray_activated(self, reason):
@@ -138,3 +139,15 @@ class SessionWindow(QMainWindow):
         self.tray_icon.hide()
         self.close()
         self.session_closed.emit()
+
+    def changeEvent(self, event):
+        if event.type() == QEvent.WindowStateChange and self.isMinimized():
+            QTimer.singleShot(0, self.hide_to_tray)
+        super().changeEvent(event)
+
+    def closeEvent(self, event):
+        if self.tray_icon.isVisible():
+            self.hide_to_tray()
+            event.ignore()
+        else:
+            super().closeEvent(event)

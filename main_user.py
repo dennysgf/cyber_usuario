@@ -4,7 +4,8 @@ from dialogs.login import LoginDialog
 from dialogs.session import SessionWindow
 from dialogs.config_dialog import ConfigDialog
 from utils.config_manager import load_config
-
+import os
+from PyQt5.QtGui import QIcon
 
 class MainApp:
     def __init__(self):
@@ -12,6 +13,8 @@ class MainApp:
         self.session = None
         self.ensure_config()
         self.show_login()
+        icon_path = os.path.join(os.path.dirname(__file__), "assets", "icons8-controlar-64.ico")
+        self.app.setWindowIcon(QIcon(icon_path))
 
     def ensure_config(self):
         config = load_config()

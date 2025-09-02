@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00f21847-4680-4f90-9f84-7ca7220d30c6" name="Changes" comment="fix">
+    <list default="true" id="00f21847-4680-4f90-9f84-7ca7220d30c6" name="Changes" comment="estilos finales del login">
+      <change afterPath="$PROJECT_DIR$/assets/icons8-controlar-64.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dialogs/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogs/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dialogs/test_window.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,22 +51,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main_user.executor": "Run",
-    "Python.test_connection.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/usuario/Desktop/cyber_control/cyber_usuario"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_connection.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/Desktop/cyber_control/cyber_usuario/assets&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\usuario\Desktop\cyber_control\cyber_usuario" />
       <recent name="C:\Users\usuario\Desktop\cyber_control\cyber_usuario\assets" />
+      <recent name="C:\Users\usuario\Desktop\cyber_control\cyber_usuario" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main_user">
@@ -202,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756829838797</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="estilos finales del login">
+      <option name="closed" value="true" />
+      <created>1756831327117</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756831327117</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -228,6 +242,7 @@
     <MESSAGE value="configuración de sesiones activas e inactivas" />
     <MESSAGE value="configuraciones finales" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="estilos finales del login" />
+    <option name="LAST_COMMIT_MESSAGE" value="estilos finales del login" />
   </component>
 </project>

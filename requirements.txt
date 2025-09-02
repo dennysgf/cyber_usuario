@@ -1,3 +1,5 @@
 PyQt5
 psycopg2-binary
 bcrypt
+pillow
+python-dotenv
