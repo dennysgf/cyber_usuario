@@ -6,8 +6,9 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import QTimer, Qt, pyqtSignal
 from PyQt5.QtGui import QIcon
 import os
-from utils.models import get_time_remaining
+from utils.models import get_time_remaining, set_session_state
 from utils.db import get_connection
+
 
 class SessionWindow(QMainWindow):
     session_closed = pyqtSignal()
@@ -82,6 +83,9 @@ class SessionWindow(QMainWindow):
         self.sync_timer.timeout.connect(self.sync_with_db)
         self.sync_timer.start(3000)
 
+        pc_number = int(os.getenv("USER_PC_NUMBER", "0"))
+        set_session_state(self.user["id"], True, pc_number)
+
     def hide_to_tray(self):
         self.hide()
         self.tray_icon.showMessage("Cyber Control", "La barra se ocultó en el área de notificación.")
@@ -122,6 +126,8 @@ class SessionWindow(QMainWindow):
             conn.commit()
             cur.close()
             conn.close()
+        set_session_state(self.user["id"], False, None)
+
         self.timer.stop()
         if hasattr(self, "sync_timer"):
             self.sync_timer.stop()
