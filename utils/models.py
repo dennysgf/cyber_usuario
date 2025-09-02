@@ -15,9 +15,8 @@ def validate_user(username, password):
             return None
         if not bcrypt.checkpw(password.encode("utf-8"), user[2].encode("utf-8")):
             return None
-        return {"id": user[0], "username": user[1], "tiempo": user[3]}
-    except Exception as e:
-        print(f"Error al validar usuario: {e}")
+        return {"id": user[0], "username": user[1], "tiempo": int(user[3])}
+    except Exception:
         return None
 
 def get_time_remaining(user_id):
@@ -30,9 +29,8 @@ def get_time_remaining(user_id):
         result = cur.fetchone()
         cur.close()
         conn.close()
-        return float(result[0]) if result else 0
-    except Exception as e:
-        print(f"Error al obtener tiempo: {e}")
+        return int(result[0]) if result else 0
+    except Exception:
         return 0
 
 def logout_user(user_id):
