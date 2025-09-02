@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QDialog, QVBoxLayout, QLabel, QLineEdit, QPushButton
 from PyQt5.QtCore import Qt
 from utils.models import validate_user
+from utils.config_manager import load_config
 
 class LoginDialog(QDialog):
     def __init__(self, parent=None):
@@ -9,6 +10,13 @@ class LoginDialog(QDialog):
         self.showFullScreen()
 
         layout = QVBoxLayout()
+
+        config = load_config()
+        pc_number = config.get("pc_number") if config else "0"
+        self.label_pc = QLabel(f"PC {pc_number}")
+        self.label_pc.setAlignment(Qt.AlignRight)
+        self.label_pc.setStyleSheet("font-size: 26px; font-weight: bold; color: white;")
+        layout.addWidget(self.label_pc)
 
         self.label = QLabel("Ingrese sus credenciales")
         self.label.setAlignment(Qt.AlignCenter)
