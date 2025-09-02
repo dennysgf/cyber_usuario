@@ -2,13 +2,23 @@ import sys
 from PyQt5.QtWidgets import QApplication
 from dialogs.login import LoginDialog
 from dialogs.session import SessionWindow
+from dialogs.config_dialog import ConfigDialog
+from utils.config_manager import load_config
 
 
 class MainApp:
     def __init__(self):
         self.app = QApplication(sys.argv)
         self.session = None
+        self.ensure_config()
         self.show_login()
+
+    def ensure_config(self):
+        config = load_config()
+        if not config:
+            config_dialog = ConfigDialog()
+            if config_dialog.exec_() != ConfigDialog.Accepted or not config_dialog.success:
+                sys.exit(0)
 
     def show_login(self):
         login = LoginDialog()

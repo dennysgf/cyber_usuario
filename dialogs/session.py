@@ -1,13 +1,13 @@
-# session.py
 from PyQt5.QtWidgets import (
     QMainWindow, QWidget, QHBoxLayout, QLabel, QPushButton,
     QApplication, QSystemTrayIcon, QMenu, QAction
 )
 from PyQt5.QtCore import QTimer, Qt, pyqtSignal
 from PyQt5.QtGui import QIcon
-import os
 from utils.models import get_time_remaining, set_session_state
 from utils.db import get_connection
+from utils.config_manager import load_config
+import os
 
 
 class SessionWindow(QMainWindow):
@@ -83,7 +83,8 @@ class SessionWindow(QMainWindow):
         self.sync_timer.timeout.connect(self.sync_with_db)
         self.sync_timer.start(3000)
 
-        pc_number = int(os.getenv("USER_PC_NUMBER", "0"))
+        config = load_config()
+        pc_number = int(config.get("pc_number", 0)) if config else 0
         set_session_state(self.user["id"], True, pc_number)
 
     def hide_to_tray(self):
