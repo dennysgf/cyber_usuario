@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="00f21847-4680-4f90-9f84-7ca7220d30c6" name="Changes" comment="ajustes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_connection.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +28,12 @@
     &quot;assignee&quot;: &quot;dennysgf&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/dennysgf/cyber_usuario.git&quot;,
-    &quot;accountId&quot;: &quot;4a7caeb2-16a3-4774-9c90-0af25aac1636&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/dennysgf/cyber_usuario.git",
+    "accountId": "0d483dba-460d-4255-a9ee-696848c96acc"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
