@@ -3,15 +3,30 @@ from PyQt5.QtWidgets import QApplication
 from dialogs.login import LoginDialog
 from dialogs.session import SessionWindow
 
-def start_login():
-    login = LoginDialog()
-    if login.exec_():
-        user = login.user_data
-        session = SessionWindow(user)
-        session.session_closed.connect(start_login)
-        session.show()
+
+class MainApp:
+    def __init__(self):
+        self.app = QApplication(sys.argv)
+        self.session = None
+        self.show_login()
+
+    def show_login(self):
+        login = LoginDialog()
+        if login.exec_():
+            user = login.user_data
+            self.start_session(user)
+        else:
+            sys.exit(0)
+
+    def start_session(self, user):
+        self.session = SessionWindow(user)
+        self.session.session_closed.connect(self.show_login)
+        self.session.show()
+
+    def run(self):
+        sys.exit(self.app.exec_())
+
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    start_login()
-    sys.exit(app.exec_())
+    app = MainApp()
+    app.run()
