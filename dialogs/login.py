@@ -17,7 +17,8 @@ class LoginDialog(QDialog):
         self.btn_exit.setFixedSize(40, 40)
         self.btn_exit.setStyleSheet("background-color: red; color: white; font-weight: bold; font-size: 18px;")
         self.btn_exit.clicked.connect(self.try_exit)
-        top_bar.addWidget(self.btn_exit)
+
+        top_bar.addWidget(self.btn_exit, alignment=Qt.AlignLeft)
         layout.addLayout(top_bar)
 
         config = load_config()

@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00f21847-4680-4f90-9f84-7ca7220d30c6" name="Changes" comment="configuración de sesiones activas e inactivas">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dialogs/exit_dialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="00f21847-4680-4f90-9f84-7ca7220d30c6" name="Changes" comment="configuraciones finales">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dialogs/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogs/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dialogs/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogs/session.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/config_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/config_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +59,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\usuario\Desktop\cyber_control\cyber_usuario" />
       <recent name="C:\Users\usuario\Desktop\cyber_control\cyber_usuario\assets" />
     </key>
   </component>
@@ -193,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756826658917</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="configuraciones finales">
+      <option name="closed" value="true" />
+      <created>1756829336308</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756829336308</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -217,6 +218,7 @@
     <MESSAGE value="modificaciones a sesiones de maquinas usadas" />
     <MESSAGE value="configuración de pc para rentabiliadd de uso y desuso" />
     <MESSAGE value="configuración de sesiones activas e inactivas" />
-    <option name="LAST_COMMIT_MESSAGE" value="configuración de sesiones activas e inactivas" />
+    <MESSAGE value="configuraciones finales" />
+    <option name="LAST_COMMIT_MESSAGE" value="configuraciones finales" />
   </component>
 </project>
